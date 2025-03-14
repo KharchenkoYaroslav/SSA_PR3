@@ -1,0 +1,4 @@
+Не судьба:
+
+ulimit -x
+sh: 1: ulimit: Illegal option -x

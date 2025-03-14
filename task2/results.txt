@@ -1,0 +1,25 @@
+# perf --version
+perf version 6.1.128
+# perf stat sleep 5
+
+ Performance counter stats for 'sleep 5':
+
+              0.69 msec task-clock:u                     #    0.000 CPUs utilized
+                 0      context-switches:u               #    0.000 /sec
+                 0      cpu-migrations:u                 #    0.000 /sec
+                53      page-faults:u                    #   76.756 K/sec
+            417343      cycles:u                         #    0.604 GHz
+             19144      stalled-cycles-frontend:u        #    4.59% frontend cycles idle
+             21449      stalled-cycles-backend:u         #    5.14% backend cycles idle
+            115232      instructions:u                   #    0.28  insn per cycle
+                                                  #    0.19  stalled cycles per insn
+             23794      branches:u                       #   34.459 M/sec
+              2634      branch-misses:u                  #   11.07% of all branches
+
+       5.001851356 seconds time elapsed
+
+       0.001213000 seconds user
+       0.000000000 seconds sys
+
+
+# 

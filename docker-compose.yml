@@ -1,0 +1,56 @@
+services:
+  task1_service:
+    build: ./task1
+    container_name: task1
+    stdin_open: true
+    tty: true
+    command: ["/bin/bash"]
+    privileged: false # Поміняти на true для виконання в режимі привілеїв
+
+  task2_service:
+    build: ./task2
+    container_name: task2
+    stdin_open: true
+    tty: true
+    command: ["/bin/bash"]
+
+  task3_service:
+    build: ./task3
+    container_name: task3
+    stdin_open: true
+    tty: true
+    command: ["/bin/bash"]
+    volumes:
+      - ./task3/output:/app/output
+    ulimits:
+      fsize: 10
+    
+
+  task4_service:
+    build: ./task4
+    container_name: task4
+    stdin_open: true
+    tty: true
+    command: ["/bin/bash"]
+    volumes:
+      - ./task4/output:/app/output
+    ulimits:
+      cpu: 1
+
+  task5_service:
+    build: ./task5
+    container_name: task5
+    stdin_open: true
+    tty: true
+    command: ["/bin/bash"]
+    volumes:
+      - ./task5/output:/app/output
+    ulimits:
+      fsize: 10
+
+  task6_service:
+    build: ./task6
+    container_name: task6
+    stdin_open: true
+    tty: true
+    command: ["/bin/bash"]
